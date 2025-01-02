@@ -16,13 +16,13 @@ const TaskListNumbers = () => {
     <h2 className='text-3xl font-semibold'>0</h2>
     <h3 className='text-xl font-medium'>New Task</h3>
     </div>
-    
-    <div className="p-10 bg-[#00ADB5] w-[45%] rounded-xl">
+        <div className="p-10 bg-[#00ADB5] w-[45%] rounded-xl">
     <h2 className='text-3xl font-semibold'>0</h2>
     <h3 className='text-xl font-medium'>New Task</h3>
     </div>
     </div>
-   
+    
+    
    
    </>
 
