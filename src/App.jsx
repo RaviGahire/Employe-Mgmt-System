@@ -5,19 +5,15 @@ import AdminDashboard from "./Components/Auth/Dashboard/AdminDashboard";
 
 
 
-const App  = () =>{
+const App = () => {
   return (
     <>
-    
-    {/* <LoginPage/> */}
-{/*        
-<EmployeDashboard/> */}
-<AdminDashboard/>
-
-
+      <LoginPage/>
+      {/* <EmployeDashboard/>
+      <AdminDashboard/> */}
     </>
   )
 }
 
-export default App ;
+export default App;
 
