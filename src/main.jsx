@@ -6,7 +6,7 @@ import AuthContext from './Context/AuthContext.jsx'
 import TaskContext from './Context/TaskContext.jsx'
 
 
-localStorage.clear() // here we clear local storage 
+localStorage.clear() // We clear local storage 
 
 
 createRoot(document.getElementById('root')).render(
