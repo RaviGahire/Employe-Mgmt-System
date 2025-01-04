@@ -5,34 +5,36 @@ import AdminDashboard from "./Components/Auth/Dashboard/AdminDashboard";
 import { getLocalStorage, setLocalStorage } from "./Utils/LocalStorage";
 
 
-
 const App = () => {
+ 
+const [user, setUser] = useState(null)
 
-const [user, setUser] = useState(null);
+ const handleLogin = (email,password)=>{
 
-const handleLogin = (email,password)=>{
-if (email == 'admin@example.com' && password == '123'){
+if(email == 'admin@me.com' && password == '123'){
+setUser('admin')
 
-  console.log('This is admin ')
-
-}else if (email == 'user@example.com' && password == '123'){
-  console.log('User login succesfully')
-}
-else{
-  alert("Invalid user")
-}
-  
+} 
+else if(email == 'user@me.com' && password == '123'){
+ setUser('employee')
 }
 
+else {
+  alert('invalid user')
+}
+
+
+
+
+ }
+
+ 
 
   return (
     <>
-    {/* Here we did conditional rendering  and pass the handlelogin function to login component*/}
-      {!user ? <LoginPage  handleLogin={handleLogin}/> : ''}
+ {!user ?  <LoginPage handleLogin= {handleLogin} /> : ''}
 
-
-      {/* <EmployeDashboard/>
-      <AdminDashboard/> */}
+{user == 'admin' ? <AdminDashboard/> : <EmployeDashboard/>}
     </>
   )
 }

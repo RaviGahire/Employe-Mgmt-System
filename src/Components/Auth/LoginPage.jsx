@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 //Here we pass the handleLogin login fuction from App componet 
-const LoginPage = (handleLogin) => {
-
+const LoginPage = ({handleLogin}) => {
+ 
     //Tow way binding for form 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -12,7 +12,8 @@ const LoginPage = (handleLogin) => {
     //we create this function for prevent form default behaver passing Synthetic Event(e) 
     const submithandler = (e) => {
         e.preventDefault()
-        handleLogin(email, password)
+        handleLogin(email,password)
+      
 
         //for clear the input field
         setEmail('')
