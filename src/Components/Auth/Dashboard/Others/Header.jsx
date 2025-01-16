@@ -16,7 +16,6 @@ const Header = () => {
 
 
 const logOutUser = () =>{
-
 localStorage.setItem('loggedInUser', '')
 window.location.reload() // This method to reload the page automatically
 

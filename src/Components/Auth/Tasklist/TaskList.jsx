@@ -14,17 +14,17 @@ const TaskList = ({ data }) => {
             {
                 data.tasks.map((element , idx) => {
                     if (element.active) {
-                        return <AcceptTask key={idx}/>
+                        return <AcceptTask key={idx} data ={element}/>
                     }
                     if (element.newTask) {
-                        return <NewTask  key={idx}/>
+                        return <NewTask  key={idx} data ={element}/>
                     }
                     if (element.completed) {
-                        return <CompeletTask key={idx}/>
+                        return <CompeletTask key={idx} data ={element}/>
 
                     }
                     if (element.failed) {
-                        return <FaildTask key={idx} />
+                        return <FaildTask key={idx}data ={element} />
                     }
 
                 })
